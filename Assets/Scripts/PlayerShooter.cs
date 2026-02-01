@@ -24,6 +24,6 @@ public class PlayerShooter : MonoBehaviour
     private void ShootBullet()
     {
         Vector3 spawnPos = transform.position + new Vector3(0, 0.5f, 0);  // Offset mũi tàu
-        Instantiate(bulletPrefab, spawnPos, transform.rotation);
+        Instantiate(bulletPrefab, spawnPos, Quaternion.identity);
     }
 }
