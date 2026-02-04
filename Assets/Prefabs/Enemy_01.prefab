@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1773378603855710582}
   m_Layer: 7
   m_Name: Enemy_01
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 418c669dc83aafa418f7b8828a35b20f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 1280240331523082, guid: 45ae5851ef2832044bba82850372d67b,
+  explosionPrefab: {fileID: 1280240331523082, guid: 031faf5ef0ec4c34c86671fa3e2e81d1,
     type: 3}
 --- !u!61 &665891996772732096
 BoxCollider2D:

@@ -1,15 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float flySpeed = 5f;  // Tốc độ bay (có thể chỉnh Inspector)
+    public float flySpeed = 30f;
+    private Rigidbody2D rb;
 
-    void Update()
+    void Start()
     {
-        var newPosition = transform.position;
-        newPosition.y += Time.deltaTime * flySpeed;  // Bay lên (Y tăng)
-        transform.position = newPosition;
+        rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0;
+        rb.velocity = Vector2.up * flySpeed; // bay lên
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

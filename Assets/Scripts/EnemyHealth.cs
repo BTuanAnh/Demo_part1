@@ -8,7 +8,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Bullet"))  // Chỉ xử lý khi trúng Bullet
+        if (collision.CompareTag("Player"))  // Chỉ xử lý khi trúng Bullet
         {
             // Destroy bullet NGAY TẠI ĐÂY (trước khi Die)
             Destroy(collision.gameObject);
